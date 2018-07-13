@@ -73,6 +73,8 @@ class Export
         host: options.authConfig.host
         projectKey: projectKey
         credentials: options.authConfig.credentials
+      createQueueMiddleware
+        concurrency: 20
       createUserAgentMiddleware options.userAgentConfig
       createHttpMiddleware options.httpConfig
     ])
